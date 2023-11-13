@@ -19,14 +19,14 @@ for profile in profiles:
                     data += response.get("NatGateways")
             return data
 
-        lbs =get_nats()
+        natss =get_nats()
 
         time_now = datetime.now()
         with open(f"report.csv",mode='w') as csvfile:
             fieldnames = ["profile","PublicIp","VpcId","SubnetId",""]
             csv_writer = csv.DictWriter(csvfile,fieldnames=fieldnames) 
             csv_writer.writeheader()
-            for nat in get_nats:
+            for nat in natss:
                 public_ip = nat["NatGatewayAddresses"]["PublicIp"]
                 vpc_id    = nat["VpcId"]
                 subnet_id = nat["SubnetId"]
