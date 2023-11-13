@@ -1,0 +1,14 @@
+[profile 22222222222]
+region = us-east-1
+sso_start_url = https://yoursso.awsapps.com/start
+sso_region = us-east-1
+sso_account_id = 22222222222
+sso_role_name = Devops
+output = json
+[profile 1111111111]
+region = us-east-1
+sso_start_url = https://yoursso.awsapps.com/start
+sso_region = us-east-1
+sso_account_id = 1111111111
+sso_role_name = Devops
+output = json

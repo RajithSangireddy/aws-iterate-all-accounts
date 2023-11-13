@@ -1,0 +1,9 @@
+{% for account in accounts -%}
+[profile {{ account }}]
+region = {{ region }}
+sso_start_url = {{ sso_url }}
+sso_region = {{ sso_region }}
+sso_account_id = {{ account }}
+sso_role_name = {{ sso_role_name }}
+output = json
+{% endfor -%}
