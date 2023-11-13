@@ -8,8 +8,7 @@ with open(f"./config.yaml") as ymlfile:
     data = yaml.safe_load(ymlfile)
 
 session = boto3.Session(region_name=data['credentials']['region'],profile_name=profiles)
-client = session.client('ec2',)
-client = boto3.client('ec2',region_name=data['credentials']['region'])   
+client = session.client('ec2') 
 def get_nats():
     response = client.describe_nat_gateways(MaxResults=100)
     data = response.get("NatGateways")
